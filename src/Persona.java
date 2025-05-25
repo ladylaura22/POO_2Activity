@@ -69,9 +69,18 @@ public class Persona {
 
         }
 
+        // METODO PARA MOSTRAR tODO
+
+        System.out.println("Lista de personas ingresadas con todos sus datos:");
+        for (Persona persona : personas) {
+            System.out.println("Nombre: " + persona.getNombre() + "\nApellido: " + persona.getApellido() +
+                    "\nGénero: " + persona.getGenero() + "\nEdad: " + persona.getEdad());
+
+        }
 
 
-        // Metodo para capturar nombre y genero
+
+        // METODO PARA TOMAR NOMNBRES Y GENEROS
 
         List<Persona> NombresYGeneros = new ArrayList<>();
 
@@ -80,7 +89,9 @@ public class Persona {
 
         }
 
-        // Mostrar nombres y géneros
+        // IMPRIMIR NOMBRES Y GENEROS
+        System.out. println("--------------------------------------");
+        System.out.println("LISTA DE NOMBRES Y GÉNEROS:");
         System.out.println("Nombres y géneros capturados:");
         int i= 1; // Contador para enumerar los nombres
         for (Persona persona : NombresYGeneros)
@@ -90,14 +101,10 @@ public class Persona {
         }
 
 
-        // METODO PARA MOSTRAR TODO
+        // METODO PARA CALCULAR EL PROMEDIO DE EDADES
 
-        System.out.println("Lista de personas registradas:");
-        for (Persona persona : personas) {
-            System.out.println("Nombre: " + persona.getNombre() +
-                    "Género: " + persona.getGenero());
 
-        }
+
 
 
         scanner.close();
