@@ -12,7 +12,7 @@ public class Persona {
     public Persona(String nombre, String apellido, String genero, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.genero = genero;
+        this.genero = genero.toLowerCase(); // Convertir a minúsculas para evitar errores por mayúsculas
         this.edad = edad;
 
     }
@@ -20,7 +20,7 @@ public class Persona {
     // **Constructor adicional solo con nombre y género**
     public Persona(String nombre, String genero) {
         this.nombre = nombre;
-        this.genero = genero;
+        this.genero = genero.toLowerCase();
         this.apellido = ""; // valor por defecto
         this.edad = 0;      // valor por defecto
     }
@@ -71,8 +71,8 @@ public class Persona {
         List<Persona> nombresYGeneros = copiarNombresYGeneros(personas);
         imprimirNombresYGeneros(nombresYGeneros);
 
-        System.out.println("Cantidad de personas masculinas: " + contarGenero(personas, "Masculino"));
-        System.out.println("Cantidad de personas femeninas: " + contarGenero(personas, "Femenino"));
+        System.out.println("Cantidad de personas masculinas: " + contarGenero(personas, "masculino"));
+        System.out.println("Cantidad de personas femeninas: " + contarGenero(personas, "femenino"));
         System.out.println("PROMEDIO DE EDADES: " + calcularPromedioEdad(personas));
 
         scanner.close();
